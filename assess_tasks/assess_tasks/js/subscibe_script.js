@@ -1,0 +1,17 @@
+let emailElem = document.getElementById("email");
+let emailValue = emailElem.value; 
+
+let sub = document.getElementById("sub");
+
+function validateEmail(emailValue) {
+  let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!emailPattern.test(emailValue)) {
+    document.getElementById("unameerror").textContent = "Enter a valid email address";
+    return false;
+  } else {
+    getElementById("unameerror").textContent = "";
+    return true;
+  }
+}
+
+
