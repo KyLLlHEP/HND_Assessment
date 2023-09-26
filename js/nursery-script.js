@@ -19,6 +19,6 @@ menuselectElm.addEventListener("change",function(){
 let resetBtn = document.getElementById("rst");
 
 resetBtn.addEventListener("click",function(){
-
+  document.getElementById("msgout").innerHTML = "";
 })
 
