@@ -10,13 +10,13 @@ let showResult10 = document.getElementById("output10");
 // Function for calculating the number of coins of different denominations from a given amount in pence
 function calculateCoins(pence) {
   let coins50 = Math.floor(pence / 50);// Number of 50p coins
-  pence %= 50;// Update the amount by reducing it by the number of 50p coins already calculated
+  // Update the amount by reducing it by the number of 50p coins already calculated
   
   let coins20 = Math.floor(pence / 20);// Number of 20p coins
-  pence %= 20;// Update the amount by reducing it by the number of 20p coins already calculated
+ // Update the amount by reducing it by the number of 20p coins already calculated
   
   let coins10 = Math.floor(pence / 10);// Number of 10p coins
-  pence %= 10;// Update the amount by reducing it by the number of 10p coins already calculated
+ // Update the amount by reducing it by the number of 10p coins already calculated
   
   
   return {
