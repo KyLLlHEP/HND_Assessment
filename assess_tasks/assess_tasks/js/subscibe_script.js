@@ -28,4 +28,13 @@ function validateUsername(usernameValue) {
   }
 }
 
+function validateForm() {
+  let emailValid = validateEmail(emailValue);
+  let usernameIsValid = validateUsername(usernameValue);
+
+  return emailValid && usernameIsValid;
+}
+
+
+
 
