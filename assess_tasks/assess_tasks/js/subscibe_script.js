@@ -1,6 +1,9 @@
 let emailElem = document.getElementById("email");
 let emailValue = emailElem.value; 
 
+let usernameElem = document.getElementById("username");
+let usernameValue = usernameElem.value; 
+
 let sub = document.getElementById("sub");
 
 function validateEmail(emailValue) {
@@ -12,6 +15,10 @@ function validateEmail(emailValue) {
     getElementById("unameerror").textContent = "";
     return true;
   }
+}
+
+function validateUsername() {
+
 }
 
 
