@@ -1,20 +1,15 @@
 let emailElem = document.getElementById("email");
-let emailValue = emailElem.value; 
-
 let usernameElem = document.getElementById("username");
-let usernameValue = usernameElem.value; 
-
 let sub = document.getElementById("sub");
 
 function validateEmail(emailValue) {
   let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (!emailPattern.test(emailValue)) {
-    document.getElementById("unameerror").textContent = "Enter a valid email address";
+    document.getElementById("emailerror").textContent = "Enter a valid email address";
     return false;
-  } else {
-    getElementById("unameerror").textContent = "";
-    return true;
   }
+  document.getElementById("emailerror").textContent = "";
+  return true;
 }
 
 function validateUsername(usernameValue) {
@@ -22,19 +17,28 @@ function validateUsername(usernameValue) {
   if (!usernamePattern.test(usernameValue)) {
     document.getElementById("unameerror").textContent = "The username must contain only letters and numbers";
     return false;
-  } else {
-    document.getElementById("unameerror").textContent = "";
-    return true;
   }
+  document.getElementById("unameerror").textContent = "";
+  return true;
 }
 
-function validateForm() {
-  let emailValid = validateEmail(emailValue);
-  let usernameIsValid = validateUsername(usernameValue);
+sub.addEventListener("click", function(event) {
+  event.preventDefault();
 
-  return emailValid && usernameIsValid;
-}
+  let emailValue = emailElem.value;
+  let usernameValue = usernameElem.value;
+  
+  if (validateEmail(emailValue) && validateUsername(usernameValue)) {
+    window.location.href = "subbed.html";
+  }
+});
 
+let btnReset = document.getElementById("btn");
 
-
-
+btnReset.addEventListener("click", function(event) {
+  event.preventDefault();
+  emailElem.value = "";
+  usernameElem.value = "";
+  document.getElementById("emailerror").textContent = "";
+  document.getElementById("unameerror").textContent = "";
+});
