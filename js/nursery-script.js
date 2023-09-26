@@ -8,11 +8,11 @@ menuselectElm.addEventListener("change",function(){
   } else if (selectDay === "TUESDAY") {
     document.getElementById("msgout").innerHTML = "Tuesday's child is full of grace";
   } else if (selectDay === "WEDNESDAY") {
-    document.getElementById("msgout").innerHTML = "Wndnesday's child is full pf woe";
+    document.getElementById("msgout").innerHTML = "Wndnesday's child is full of woe";
   } else if (selectDay === "THURSDAY") {
     document.getElementById("msgout").innerHTML = "Thursday's child has far to go";
   } else if (selectDay === "FRIDAY") {
-    document.getElementById("msgout").innerHTML = "Firday's child is loving and giving";
+    document.getElementById("msgout").innerHTML = "Friday's child is loving and giving";
   }
 });
 
