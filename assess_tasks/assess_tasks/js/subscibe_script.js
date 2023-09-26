@@ -17,8 +17,15 @@ function validateEmail(emailValue) {
   }
 }
 
-function validateUsername() {
-
+function validateUsername(usernameValue) {
+  let usernamePattern = /^[a-zA-Z0-9]+$/;
+  if (!usernamePattern.test(usernameValue)) {
+    document.getElementById("unameerror").textContent = "The username must contain only letters and numbers";
+    return false;
+  } else {
+    document.getElementById("unameerror").textContent = "";
+    return true;
+  }
 }
 
 
