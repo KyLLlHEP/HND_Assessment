@@ -35,11 +35,17 @@ function calculateVAT() {
 
 //Check valid input
   if(!isValidInput(amount.value)) {
-    alert("Put a number please.");//Input field message 
+ //Input field message 
+    let errorMassage = "Put a number please";
     amount.style.borderColor= 'red';// Style red board input
-    return;//Exit function
+    amount.style.textTransform = 'uppercase';
+    amount.style.fontSize = '14px';
+    amount.value = errorMassage;
+        return;//Exit function
   } else {
     amount.style.borderColor = "";//Reset style input field
+    amount.value = '';
+    
   }
 //Calculate VAT
   let vat22 = amountValue * 0.22;
